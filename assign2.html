@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brookside Milk Factory - Milk Products</title>
+  <style>
+    /* Add your custom CSS styles here */
+  </style>
+  <script>
+    // JavaScript validation function
+    function validateForm() {
+      // Get form inputs
+      var productName = document.getElementById("productName").value;
+      var productDescription = document.getElementById("productDescription").value;
+      
+      // Validate inputs
+      if (productName.trim() === "" || productDescription.trim() === "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+      
+      // Report successful entry
+      alert("New product entered: " + productName);
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <!-- Home -->
+  <div id="home">
+    <!-- Add home content here -->
+    <h1>Welcome to Brookside Milk Factory!</h1>
+  </div>
+  
+  <!-- Milk Products -->
+  <div id="milkProducts">
+    <!-- Add milk products content here -->
+    <h2>Milk Products</h2>
+    <form onsubmit="return validateForm()">
+      <label for="productName">Product Name:</label><br>
+      <input type="text" id="productName" name="productName" required><br><br>
+      
+      <label for="productDescription">Product Description:</label><br>
+      <textarea id="productDescription" name="productDescription" required></textarea><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+  <!-- Processing -->
+  <div id="processing">
+    <!-- Add processing content here -->
+    <h2>Processing</h2>
+  </div>
+  
+  <!-- Contacts -->
+  <div id="contacts">
+    <!-- Add contacts content here -->
+    <h2>Contacts</h2>
+  </div>
+</body>
+</html>
